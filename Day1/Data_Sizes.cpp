@@ -1,3 +1,9 @@
+#include<iostream>
+
+#include<string>
+
+using namespace std ;
+
 int dataTypes(string type) {
 	// Write your code here
 	if(type == "Long"){
