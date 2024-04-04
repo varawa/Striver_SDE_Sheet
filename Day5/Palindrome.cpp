@@ -1,3 +1,9 @@
+#include<iostream>
+#include<string>
+#include<vector>
+#include<math.h>
+
+using namespace std ;
 class Solution {
 public:
     bool isPalindrome(string s) {
