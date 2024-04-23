@@ -23,12 +23,9 @@ class Solution
                 if((s.top() == '[' && x[i] == ']') || (s.top() == '{' && x[i] == '}') || (s.top() == '(' && x[i] == ')')){
                     s.pop() ;
                 }    
-                else{
+                else
                     s.push(x[i]) ;
-                
-                }
             }
-                
             i++ ;
         }
         
