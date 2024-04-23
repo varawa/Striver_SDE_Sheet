@@ -8,14 +8,14 @@ using namespace std ;
 class Solution
 {
     public:
-    //Function to check if brackets are balanced or not.
+    
     bool ispar(string x)
     {
         stack<char> s ;
         int i = 0 ;
-        //i++ ;
+        
         while(x[i] != '\0'){
-            //s.push(x[i]) ;
+            
             if(s.empty()){
                 s.push(x[i]) ;
             }
