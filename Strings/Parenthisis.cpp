@@ -32,12 +32,10 @@ class Solution
             i++ ;
         }
         
-        if(!s.empty()){
+        if(!s.empty())
             return false ;
-        }
-        else{
+        else
             return true ;
-        }
     }
 
 };
