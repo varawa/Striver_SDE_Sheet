@@ -1,3 +1,10 @@
+#include<iostream>
+#include<math.h>
+#include<vector>
+#include<limits.h>
+
+using namespace std ;
+
 class Solution {
 public:
     int search(vector<int>& nums, int target) {
