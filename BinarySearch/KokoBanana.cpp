@@ -11,7 +11,7 @@ public:
 
         long long int start = 1 ;
        
-        long long int end = *max_element(piles.begin(), piles.end());
+        long long int end = *max(piles.begin(), piles.end());
         long long int mid = start + (end - start)/2 ;
 
         if(piles.size() == 1){
