@@ -183,3 +183,33 @@ void Queue(){
     //Size , swap , empty same as stack .
 
 }
+
+void PQ(){
+    priority_queue<int>pq ;
+
+    pq.push(5) ;            //{5}
+    pq.push(2) ;            //{5 , 2}
+    pq.push(8) ;            //{8 , 5 , 2 }
+    pq.push(11) ;           //{11 , 8 , 5 , 2}
+    pq.push(15) ;           //{15 , 11 , 8 , 5 , 2}
+
+    cout<<pq.top() ;        //Prints 10 .
+
+    pq.pop() ;              //{11 , 8 , 5 , 2}
+
+    cout<<pq.top() ;        //Prints 11 .
+
+    //Size , swap , empty functions same as others .
+
+    //MinHeap
+    //Minimum element stays on top .
+
+    priority_queue<int , vector<int> , greater<int>> pq ;
+    pq.push(5) ;            //{5}
+    pq.push(2) ;            //{2 , 5}
+    pq.push(8) ;            //{2 , 5 , 8}
+    pq.emplace(10) ;        //{2 , 5 , 8 , 10}
+
+    cout<<pq.top() ;        //Prints 2 .
+
+}
