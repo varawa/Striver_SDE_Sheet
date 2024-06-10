@@ -141,6 +141,8 @@ void Deque(){
 }
 
 void stacks(){
+    //Every operation is O(1) ;
+
     stack<int> stk ;
     stk.push(1) ;       //{1}
     stk.push(2) ;       //{2 , 1}
@@ -156,9 +158,28 @@ void stacks(){
 
     cout<<stk.size() ;  // 4
 
-    cout<<stk.empty() ;
+    cout<<stk.empty() ; //Check if empty or not .
 
     stack<int>st1 , st2 ;
     st1.swap(st2) ;
+
+}
+
+void Queue(){
+    queue<int> q ;
+    q.push(1) ;         //{1}
+    q.push(2) ;         //{1 , 2}
+    q.push(3) ;         //{1 , 2 , 3}
+    q.push(4) ;         //{1 ,2 , 3 , 4}
+
+    q.back() += 5 ;     //{1 , 2 , 3 , 9}
+
+    cout<<q.front() ;   //Prints 1
+
+    q.pop() ;           //{2 , 3 , 9}
+
+    cout<<q.front() ;   //prints 2 .
+
+    //Size , swap , empty same as stack .
 
 }
