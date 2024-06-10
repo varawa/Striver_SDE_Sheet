@@ -139,3 +139,26 @@ void Deque(){
     //begin , end , rbegin , rend , clear , insert , size , swap .
 
 }
+
+void stacks(){
+    stack<int> stk ;
+    stk.push(1) ;       //{1}
+    stk.push(2) ;       //{2 , 1}
+    stk.push(3) ;       //{3 , 2 , 1}
+    stk.push(4) ;       //{4 , 3 , 2 , 1}
+    stk.emplace(5) ;    //{5 , 4 , 3 , 2 , 1}
+
+    cout<<stk.top() ;   //Print 5
+
+    stk.pop() ;         //{4 , 3 , 2 , 1}
+
+    cout<<stk.top() ;   // 4
+
+    cout<<stk.size() ;  // 4
+
+    cout<<stk.empty() ;
+
+    stack<int>st1 , st2 ;
+    st1.swap(st2) ;
+
+}
