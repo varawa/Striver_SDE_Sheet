@@ -284,3 +284,11 @@ void Multiset(){
     //Rest all functions same as set .
 
 }
+
+void UnorderedSet(){
+    unordered_set<int> st ;
+    //Lower_bound and Upper_bound do not work .
+    //Rest all functions same as set but not ordered .
+    //As it doesn't store in any particular order , it has a better complexity ,
+    //in most cases except when collisions happen .
+}
