@@ -22,6 +22,9 @@ int main(){
 //Vectors
 
 void vectors(){
+    //Implemented by a SINGLY LINKED LIST .
+
+
     vector<int> v ;
 
     v.push_back(1) ;
@@ -99,4 +102,21 @@ void vectors(){
 
     cout<<v.empty()<<endl ;
 
+}
+
+void List(){
+    //Implemented by a DOUBLY LINKED LIST .
+
+    list<int> ls ;
+
+    ls.push_back(2) ;       //{2}
+    ls.emplace_back(4) ;    //{2 , 4}
+
+    //Insert is used if vector .
+    ls.push_front(5) ;      //{5 , 2 , 4}
+
+    ls.emplace_front() ;    //{2 , 4}
+
+    //Rest functions same as vector .
+    //Begin , end , rbegin , rend , clear , insert , size , swap .
 }
