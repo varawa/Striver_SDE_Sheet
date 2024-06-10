@@ -213,3 +213,53 @@ void PQ(){
     cout<<pq.top() ;        //Prints 2 .
 
 }
+
+void Set(){
+    //A tree is maintained .
+    //Stores everything in sorted order and
+    //Every element should be unique .
+
+    //Everything has logarithmic time complexity .
+
+    set<int>s ;
+
+    s.insert(1) ;       //{1}
+    s.insert(2) ;       //{1 , 2}
+    s.insert(2) ;       //{1 , 2}
+    s.insert(4) ;       //{1 , 2 , 4}
+    s.insert(3) ;       //{1 , 2 , 3 , 4}
+
+    //Functionality of insert in vector .
+    //Can be used also , that only increases .
+    //efficiency .
+
+    //begin() , end() , rbegin() , rend() , size() .
+    //empty() and swap() are some as those of above .
+
+    //{1 , 2 , 3 , 4 , 5}
+    auto it = s.find(3) ;       //Returns an iterator which points to 3 .
+
+
+    auto it = s.find(8) ;       //Returns an iterator which points after 5 .
+
+    s.erase(5) ;                //Erases 5 , takes logarithmic time .
+
+    int cnt = s.count(1) ;      //Boolean either 1(exists) or 0(doesn't exist) .
+
+    auto it = s.find(3) ;
+    s.erase(it) ;               //It takes constant time .
+
+    //{1 , 2 , 3 , 4 , 5}
+    auto it1 = s.find(2) ;
+    auto it2 = s.find(4) ;      
+    s.erase(it1 , it2) ;        //After erase {1 , 4 , 5}  [first , last]
+
+    //lower_bound() and upper_bound() function works in the same way .
+    //as in vector it does .
+
+    //This is the syntax .
+
+    auto it = s.lower_bound(2) ;
+    auto it = s.upper_bound(3) ;
+    
+}
