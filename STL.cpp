@@ -331,3 +331,47 @@ void Multimap(){
 void UnorderedMap(){
     //Same as map but not sorted .
 }
+
+void Extra(){
+    int a[5] = {4 , 2 , 6 , 1 , 2} ;
+    sort(a , a + 5) ;
+
+    //Descending Order
+    sort(a , a + 5 , greater<int>()) ;
+
+
+    vector<int>v ;
+    sort(v.begin() , v.end()) ;
+
+    pair<int , int> arr[] = {{1 , 2} , {2 , 1} , {4 , 1}} ;
+    
+    //Sort it according to second element .
+    //If second element is same , then sort
+    //it according to first element but in descending .
+
+    sort(arr , arr + 3 , comp) ;
+
+    int num = 7 ;
+    int cnt = __builtin_popcount(num) ;
+
+    long long num = 165786578687 ;
+    int cnt = __builtin_popcountll(num) ;
+
+    string s = "123" ;
+    //Always start from the sorted string .
+
+    do{
+        cout<<s<<endl ;
+    }while(next_permutation(s.begin() , s.end())) ;
+
+    int max = *max_element(a , a + 3) ;
+
+}
+
+bool comp(pair<int , int>p1 , pair<int , int>p2){
+    if(p1.second < p2.second) return true ;
+    if(p1.second > p2.second) return false ;
+    //If same .
+    if(p1.first > p2.first) return true ;
+    return false ;
+}
