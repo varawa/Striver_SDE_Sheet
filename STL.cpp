@@ -319,6 +319,15 @@ void Map(){
     auto it = mpp1.lower_bound(2) ;
     auto it = mpp1.upper_bound(3) ;
 
-    //erase , swap ,  size , empty , are same as above .
+    //erase , swap ,  size , empty , are same as above .s
 
+}
+
+void Multimap(){
+    //Everything is same as map but it can have duplicate keys .
+    //Only map[key] cannot be used here .
+}
+
+void UnorderedMap(){
+    //Same as map but not sorted .
 }
