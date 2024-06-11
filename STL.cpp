@@ -292,3 +292,33 @@ void UnorderedSet(){
     //As it doesn't store in any particular order , it has a better complexity ,
     //in most cases except when collisions happen .
 }
+
+void Map(){
+
+    //Everything is stored in sorted order .
+
+    map<int , int> mpp1 ;
+
+    //map<int , pair<int , int>> mpp ;
+
+    //map<pair<int , int> , int> mpp2 ;
+
+    mpp1[1] = 2 ;
+    mpp1.emplace(3 , 1) ;
+
+    mpp1.insert({2 , 4}) ;
+
+    cout<<mpp1[1]<<endl ;
+
+    auto it = mpp1.find(3) ;
+    //auto i = *(it) ;
+    
+    //cout<< i.second <<endl ;
+    cout<< it->second <<endl ;
+
+    auto it = mpp1.lower_bound(2) ;
+    auto it = mpp1.upper_bound(3) ;
+
+    //erase , swap ,  size , empty , are same as above .
+
+}
