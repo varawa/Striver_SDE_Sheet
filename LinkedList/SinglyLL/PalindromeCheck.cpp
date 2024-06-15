@@ -1,7 +1,6 @@
-#include<bits/stdc++.h>
-using namespace std ;
-  //Definition for singly-linked list.
-  struct ListNode {
+
+ // Definition for singly-linked list.
+ struct ListNode {
       int val;
       ListNode *next;
       ListNode() : val(0), next(nullptr) {}
@@ -9,23 +8,47 @@ using namespace std ;
       ListNode(int x, ListNode *next) : val(x), next(next) {}
   };
  
+
 class Solution {
 public:
     bool isPalindrome(ListNode* head) {
+        ListNode* mid = middle(head) ;
+        ListNode* end = rev(mid) ;
+        ListNode* start = head ;
+
+        while(end && start){
+            if(start->val != end->val)
+                return false ;
+            
+            start = start->next ;
+            end = end->next ;
+        }
+
+        return true ;
+        
+    }
+
+    ListNode* rev(ListNode* head){
         ListNode* temp = head ;
         ListNode* old = nullptr ;
-        stack<int> stk ;
 
         while(temp != nullptr){
-            stk.push(temp->val) ;
-            temp = temp->next ;
+            ListNode* nex = temp->next ;
+            temp->next = old ;
+            old = temp ;
+            temp = nex ;
         }
-        temp = head ;
-        while(!stk.empty()){
-            if(stk.top() != temp->val) return false ;
-            stk.pop() ;
-            temp = temp->next ;
+        return old ;
+    }
+
+    ListNode* middle(ListNode* head){
+        ListNode* fast = head ;
+        ListNode* slow = head ;
+
+        while(fast && fast->next){
+            fast = fast->next->next ;
+            slow = slow->next ;
         }
-        return true ;
+        return slow ;
     }
 };
