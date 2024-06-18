@@ -53,30 +53,20 @@ you are required to complete the below method */
 void SortedStack :: sort()
 {
     stack<int> temp ;
-    int num = s.top() ;
-    s.pop() ;
-    temp.push(num) ;
+    
     while(!s.empty()){
-        num = s.top() ;
+        int num = s.top() ;
         s.pop() ;
     
-        while(!temp.empty() && temp.top() < num ){
+        while(!temp.empty() && temp.top() > num ){
             int n = temp.top() ;
             temp.pop() ;
             s.push(n) ;
         }
     
         temp.push(num) ;
-        
-        while(!s.empty() && s.top() < temp.top()){
-            int n = s.top() ;
-            s.pop() ;
-            temp.push(n) ;
-        }
     }
-    while(!temp.empty()){
-        int n = temp.top() ;
-        s.push(n) ;
-        temp.pop() ;
-    }
+    s = temp ;
+    
 }
+
