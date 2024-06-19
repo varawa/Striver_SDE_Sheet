@@ -5,7 +5,6 @@ using namespace std ;
 class MyStack {
 public:
     queue<int> temp ;
-    queue<int> help ;
     int t = -1 ;
 
     MyStack() {
@@ -18,19 +17,17 @@ public:
     }
     
     int pop() {
-        while(temp.size() != 1){
+        int n = temp.size() ;
+        while(n != 1){
             int x = temp.front() ;
             temp.pop() ;
-            help.push(x) ;
+            temp.push(x) ;
+            t = x ;
+            n-- ;
         }
         int popped = temp.front() ;
         temp.pop() ;
-        while(!help.empty()){
-            int x = help.front() ;
-            help.pop() ;
-            temp.push(x) ;
-            t = x ;
-        }
+        
         return popped ;
     }
     
