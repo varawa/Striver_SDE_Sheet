@@ -1,24 +1,73 @@
-#include<iostream>
-#include<math.h>
-#include<vector>
-#include<limits.h>
+//{ Driver Code Starts
+// Initial Template for C++
 
-using namespace std ;
+// C program for implementation of Bubble sort
+#include <bits/stdc++.h>
+#include <stdio.h>
+using namespace std;
 
-void bubbleSort(vector<int>& arr, int n) 
-{
-    //write your code here
-    int i, j;
-    bool flag;
-    for (i = 0; i < n - 1; i++) {
-        flag = false;
-        for (j = 0; j < n - i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                swap(arr[j], arr[j + 1]);
-                flag = true;
-            }
-        }
-        if (flag == false)
-            break;
-    }
+// swapping the elements
+void swap(int *xp, int *yp) {
+    int temp = *xp;
+    *xp = *yp;
+    *yp = temp;
 }
+
+
+// } Driver Code Ends
+// User function Template for C++
+
+class Solution {
+  public:
+    // Function to sort the array using bubble sort algorithm.
+    void bubbleSort(int arr[], int n) {
+        
+        bool flag = false ;
+        
+        for(int i = 0 ; i < n ; i++){
+            for(int j = 0 ; j < n - i - 1 ; j++){
+                if(arr[j] > arr[j + 1]){
+                    flag = true ;
+                    swap(arr[j] , arr[j + 1]) ;
+                }
+            }
+            if(flag == false)
+                break ;
+        }
+    }
+    
+    
+};
+
+
+//{ Driver Code Starts.
+
+/* Function to print an array */
+void printArray(int arr[], int size) {
+    int i;
+    for (i = 0; i < size; i++)
+        printf("%d ", arr[i]);
+    printf("\n");
+}
+
+// Driver program to test above functions
+int main() {
+    int arr[1000], n, T, i;
+
+    scanf("%d", &T);
+
+    while (T--) {
+
+        scanf("%d", &n);
+
+        for (i = 0; i < n; i++)
+            scanf("%d", &arr[i]);
+
+        Solution ob;
+
+        ob.bubbleSort(arr, n);
+        printArray(arr, n);
+    }
+    return 0;
+}
+// } Driver Code Ends
