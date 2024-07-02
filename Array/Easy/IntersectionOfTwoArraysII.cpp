@@ -1,9 +1,5 @@
-#include<iostream>
-#include<math.h>
-#include<algorithm>
-#include<vector>
-#include<limits.h>
-#include<numeric>
+#include<bits/stdc++.h>
+
 
 using namespace std ;
 
